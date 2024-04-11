@@ -7,11 +7,11 @@
  */
 int main(void)
 {
-	sizeint = sizeof(int);
-	sizechar = sizeof(char);
-	sizelongint = sizeof(long int);
-	sizelonglongint = sizeof(long long int);
-	sizefloat = sizeof(float)
+	int sizeint = sizeof(int);
+	int sizechar = sizeof(char);
+	int sizelongint = sizeof(long int);
+	int sizelonglongint = sizeof(long long int);
+	int sizefloat = sizeof(float)
 	printf("Size of a char: %d byte(s)\n", sizeint);
 	printf("Size of an int: %d byte(s)\n", sizechar);
 	printf("Size of a long int: %d byte(s)\n", sizelongint);
