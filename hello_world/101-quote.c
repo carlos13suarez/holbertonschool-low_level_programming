@@ -8,8 +8,9 @@
  */
 int main(void)
 {
-	char message[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-	size_t length_message = sizeof(message)/sizeof(message[0]);
-	write(2,message,length_message);
+	char buff[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19";
+	size_t length_buff = sizeof(buff) / sizeof(buff[0]);
+
+	write(2, buff, length_buff);
 	return (1);
 }
