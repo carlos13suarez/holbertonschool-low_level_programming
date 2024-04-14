@@ -19,16 +19,16 @@ int main(void)
 	{
 		for (j = 48; j <= 57; j++)
 		{
-			for (k = 48; k <= 57; k++)
+			for (k = i; k <= 57; k++)
 			{
-				for (l = 48; l <= 57; l++)
+				for (l = j + 1; l <= 57; l++)
 				{
 					putchar(i);
 					putchar(j);
 					putchar(32);
 					putchar(k);
 					putchar(l);
-					if (i != 57 || j != 57 || k != 57 || l != 57)
+					if (i != 57 || j != 56 || k != 57 || l != 57)
 					{
 						putchar(44);
 						putchar(32);
