@@ -2,7 +2,7 @@
 
 /**
  * _islower - function
- * @parameterc: c is a character of type int.
+ * @c: The character to be checked.
  *
  * Description: Checks for lowercase character.
  *
