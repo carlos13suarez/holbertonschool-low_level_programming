@@ -10,11 +10,11 @@
  *
  * Return: Always 0. Successful.
  */
-int sum_multiples_3_or_5(int n)
+int main(void)
 {
 	int i, sum, mult_3 = 0, mult_5 = 0;
 
-	for (i = 0; i < n; i++)
+	for (i = 0; i < 1024; i++)
 	{
 		if (i % 3 == 0)
 		{
