@@ -2,8 +2,7 @@
 #include "main.h"
 
 /**
- * sum_multiples_3_or_5 - function.
- * @n: 1024
+ * main - function.
  *
  * Description: Computes and prints the sum of all the multiples of 3 or 5
  * below 1024 (excluded), followed by a new line.
