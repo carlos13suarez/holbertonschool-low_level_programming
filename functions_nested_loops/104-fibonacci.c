@@ -15,7 +15,7 @@ int main(void)
 	for (i = 0; i < 98; i++)
 	{
 		sum = fib_num + fib_num1;
-		printf("%ld", sum);
+		printf("%lu", sum);
 		fib_num1 = fib_num;
 		fib_num = sum;
 		if (i != 97)
