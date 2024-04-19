@@ -10,12 +10,12 @@
 int main(void)
 {
 	int i;
-	unsigned long int sum, fib_num = 1, fib_num1 = 0;
+	long double sum, fib_num = 1, fib_num1 = 0;
 
 	for (i = 0; i < 98; i++)
 	{
 		sum = fib_num + fib_num1;
-		printf("%lu", sum);
+		printf("%.0Lf", sum);
 		fib_num1 = fib_num;
 		fib_num = sum;
 		if (i != 97)
