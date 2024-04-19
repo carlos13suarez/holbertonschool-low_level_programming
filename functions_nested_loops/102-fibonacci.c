@@ -12,14 +12,13 @@ int main(void)
 	int i;
 	unsigned long int sum, fib_num = 1, fib_num1 = 0;
 
-	printf("0, 1, ");
-	for (i = 0; i < 48; i++)
+	for (i = 0; i < 50; i++)
 	{
 		sum = fib_num + fib_num1;
 		printf("%ld", sum);
 		fib_num1 = fib_num;
 		fib_num = sum;
-		if (i != 47)
+		if (i != 49)
 			printf(", ");
 	}
 	printf("\n");
