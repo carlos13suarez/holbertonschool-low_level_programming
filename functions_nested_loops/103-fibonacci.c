@@ -16,7 +16,7 @@ int main(void)
 	{
 		sum = fib_num + fib_num1;
 		if (sum % 2 == 0)
-			sum_even = sum_even + sum; 
+			sum_even = sum_even + sum;
 		fib_num1 = fib_num;
 		fib_num = sum;
 	}
