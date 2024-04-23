@@ -5,4 +5,4 @@ SRC := $(wildcard *.c)
 all: school
 
 school: school.o main.c
-	${CC} $^ -o school
+	${CC} school.o $< -o school
