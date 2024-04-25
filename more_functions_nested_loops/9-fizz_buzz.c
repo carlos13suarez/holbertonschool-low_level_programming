@@ -1,9 +1,13 @@
 #include <stdio.h>
 
 /**
+ * main - FizzBuzz test
  *
- *
- *
+ * Description: Prints the numbers from 1 to 100, followed by a new line.
+ * But for multiples of three print Fizz instead of the number and for the
+ * multiples of five print Buzz. For numbers which are multiples of both
+ * three and five print FizzBuzz.
+ * Return: Always 0.
  */
 int main(void)
 {
@@ -27,11 +31,13 @@ int main(void)
 		{
 			printf("%d", i);
 		}
-		
+
 		if (i != 100)
 		{
 			putchar(' ');
 		}
 	}
 	putchar('\n');
+
+	return (0);
 }
