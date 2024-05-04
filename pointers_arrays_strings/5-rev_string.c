@@ -3,7 +3,7 @@
 /**
  * rev_string - reverses a string.
  *
- * @str: array of char to print.
+ * @str: array of char to reverse.
  *
  * Return: Nothing.
  */
