@@ -3,14 +3,13 @@
 /**
  * _atoi - convert a string to an integer.
  *
- * @dest: array of char where the string will be pasted.
- * @src: string to be copied.
+ * @s: string to convert.
  *
- * Return: the pointer to dest.
+ * Return: the number.
  */
 int _atoi(char *s)
 {
-	int i, num = 0, sign = 1;
+	unsigned int i, num = 0, sign = 1;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
@@ -23,7 +22,7 @@ int _atoi(char *s)
 
 		if (s[i] == '-')
 			sign *= -1;
-		
+
 		if (s[i] == '+')
 			sign *= 1;
 	}
