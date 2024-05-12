@@ -10,7 +10,7 @@
  */
 void print_number(int n)
 {
-	int i, length = 0, decimal_accesser = 1, dn, n1 = 0;
+	unsigned int i, length = 0, decimal_accesser = 1, dn, n1 = 0;
 
 	if (n < 0)
 	{
