@@ -19,10 +19,12 @@ char *_strstr(char *haystack, char *needle)
 	for (i = 0; haystack[i] != '\0'; i++)
 		if (haystack[i] == needle[0])
 		{
-			for (k = i, j = 0; haystack[k] == needle[j] && needle[j] != '\0'; k++, j++)
+			for (k = i, j = 0; haystack[k] == needle[j]; k++, j++)
+			{
 				coincidence++;
-			if (len_needle == coincidence)
-				return (&haystack[i]);
+				if (len_needle == coincidence)
+					return (&haystack[i]);
+			}
 		}
 
 	return (NULL);
