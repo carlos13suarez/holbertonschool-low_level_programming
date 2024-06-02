@@ -36,10 +36,10 @@ char *_strdup(char *str)
 	char *arr = NULL;
 	int i = 0;
 
+	arr = (char *) malloc(_strlen(str) * sizeof(char));
+
 	if (!arr)
 		return (NULL);
-
-	arr = (char *) malloc(_strlen(str) * sizeof(char));
 
 	for (i = 0; i < _strlen(str); i++)
 		arr[i] = str[i];
