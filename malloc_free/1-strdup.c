@@ -36,7 +36,7 @@ char *_strdup(char *str)
 	char *arr = NULL;
 	int i = 0;
 
-	if (!arr)
+	if (arr == NULL)
 		return (NULL);
 
 	arr = (char *) malloc(_strlen(str) * sizeof(char));
