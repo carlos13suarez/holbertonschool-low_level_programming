@@ -38,14 +38,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	s2_length = _strlen(s2);
 	new_string_length = s1_length + (s2_length < n ? s2_length : n);
 
-	new_string = (char *) malloc(new_string_length);
+	new_string = (char *) malloc((new_string_length + 1) * sizeof(char));
 
 	if (!new_string)
 		return (NULL);
-	
+
 	for (i = 0; s1[i]; i++)
 		new_string[i] = s1[i];
-	
+
 	for (i = 0; i < (new_string_length - s1_length); i++)
 		new_string[s1_length + i] = s2[i];
 
