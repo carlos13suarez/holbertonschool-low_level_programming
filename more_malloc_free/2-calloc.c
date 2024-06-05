@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * calloc - allocates memory for an array of nmemb elements of size bytes each
+ * _calloc - allocates memory for an array of nmemb elements of size bytes each
  * and returns a pointer to the allocated memory.
  *
  * @nmemb: the number of elements to allocate.
