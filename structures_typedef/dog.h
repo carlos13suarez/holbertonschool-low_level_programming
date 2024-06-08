@@ -2,7 +2,9 @@
 #define _0_OBJECT_LIKE_MACRO_H_
 
 /* Libraries */
+
 /* Macros */
+
 /* Structures */
 /**
  * struct dog - elements of a dog object
@@ -20,5 +22,6 @@ struct dog
 
 /* Prototypes */
 void init_dog(struct dog *d, char *name, float age, char *owner);
+void print_dog(struct dog *d);
 
 #endif
