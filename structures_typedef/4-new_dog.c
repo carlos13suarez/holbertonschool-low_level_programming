@@ -80,8 +80,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(memory);
 		return (NULL);
 	}
-	strcpy(dogname, name);
-	strcpy(dogowner, owner);
+	_strcpy(dogname, name);
+	_strcpy(dogowner, owner);
 	dogage = &age;
 
 	memory->name = dogname;
