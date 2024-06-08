@@ -2,6 +2,9 @@
 #define _0_OBJECT_LIKE_MACRO_H_
 
 /* Libraries */
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
 
 /* Macros */
 
@@ -23,5 +26,6 @@ typedef struct dog
 /* Prototypes */
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
+dog_t *new_dog(char *name, float age, char *owner);
 
 #endif
