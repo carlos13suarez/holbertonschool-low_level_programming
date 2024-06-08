@@ -9,10 +9,11 @@
  */
 void free_dog(dog_t *d)
 {
-	if (!d)
+	if (d == NULL)
 	{
-		free(d->name);
-		free(d->owner);
-		free(d);
+		printf("0\n");
 	}
+	free(d->name);
+	free(d->owner);
+	free(d);
 }
