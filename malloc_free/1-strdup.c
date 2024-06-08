@@ -35,7 +35,7 @@ char *_strdup(char *str)
 {
 	char *arr = NULL;
 	int i = 0;
-	
+
 	if (!str)
 	{
 		return (NULL);
