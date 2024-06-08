@@ -11,15 +11,15 @@
  */
 int _strlen(char *s)
 {
-	int longitd = 0;
+	int len = 0;
 
 	while (*s != '\0')
 	{
-		longitd++;
+		len++;
 		s++;
 	}
 
-	return (longitd);
+	return (len);
 }
 
 
@@ -42,7 +42,7 @@ char *_strdup(char *str)
 	}
 
 
-	arr = (char *) malloc(_strlen(str) * sizeof(char));
+	arr = (char *) (malloc(_strlen(str) + 1) * sizeof(char));
 
 	if (!arr)
 		return (NULL);
