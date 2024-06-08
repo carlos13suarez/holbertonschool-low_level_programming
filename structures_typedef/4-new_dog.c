@@ -9,15 +9,15 @@
  */
 int _strlen(char *s)
 {
-        int len = 0;
+	int len = 0;
 
-        while (*s != '\0')
-        {
-                len++;
-                s++;
-        }
+	while (*s != '\0')
+	{
+		len++;
+		s++;
+	}
 
-        return (len);
+	return (len);
 }
 
 /**
@@ -46,7 +46,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dogowner = (char *) malloc(_strlen(owner) + 1);
 	if (!dogname | !dogage | !dogowner)
 	{
-		free(dogname, dogage, dogowner, memory);
+		free(dogname);
+		free(dogage);
+		free(dogowner);
+		free(memory);
 		return (NULL);
 	}
 	dogname = name;
