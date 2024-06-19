@@ -11,6 +11,17 @@
 
 
 /* Structures */
+/**
+ * struct argument_structure - elements of a argument_structure object
+ *
+ * @name: the format to be choose
+ * @printer: function pointer that prints the givenarguments
+ */
+typedef struct argument_structure
+{
+	char name;
+	void (*printer)(va_list args);
+} argument_structure;
 
 
 /* Prototypes */
