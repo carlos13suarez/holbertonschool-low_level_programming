@@ -49,7 +49,11 @@ void print_all(const char * const format, ...)
 }
 
 
-
+/**
+ * print_char - prints a char
+ *
+ * @argument: the character to print
+ */
 void print_char(va_list argument)
 {
 	printf("%c", va_arg(argument, int));
@@ -57,6 +61,11 @@ void print_char(va_list argument)
 
 
 
+/**
+ * print_int - prints a int
+ *
+ * @argument: the integer to print
+ */
 void print_int(va_list argument)
 {
 	printf("%d", va_arg(argument, int));
@@ -65,6 +74,11 @@ void print_int(va_list argument)
 
 
 
+/**
+ * print_float - prints a float
+ *
+ * @argument: the float to print
+ */
 void print_float(va_list argument)
 {
 	printf("%f", va_arg(argument, double));
@@ -73,6 +87,11 @@ void print_float(va_list argument)
 
 
 
+/**
+ * print_string - prints a string
+ *
+ * @argument: the string to print
+ */
 void print_string(va_list argument)
 {
 	char *str = va_arg(argument, char *);
