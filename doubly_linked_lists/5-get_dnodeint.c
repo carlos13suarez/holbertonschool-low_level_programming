@@ -13,11 +13,14 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 	unsigned int i = 0;
 	dlistint_t *tmp = head;
 
+	if (index > 4294967295)
+	{
+		printf("(nil)");
+		return (NULL);
+	}
+
 	for (i = 0; i < index; i++)
 		tmp = tmp->next;
-
-	if (tmp == NULL)
-		printf("(nil)");
 
 	return (tmp);
 }
