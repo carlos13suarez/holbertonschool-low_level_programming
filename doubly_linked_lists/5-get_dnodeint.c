@@ -13,7 +13,7 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 	unsigned int i = 0;
 	dlistint_t *tmp = head;
 
-	if (index > UINT_MAX)
+	if (index >= UINT_MAX)
 	{
 		printf("(nil)");
 		return (NULL);
