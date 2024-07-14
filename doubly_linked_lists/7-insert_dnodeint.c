@@ -5,7 +5,6 @@
  *
  * @h: head node.
  * @idx:  index of the list where the new node should be added.
- * Index starts at 0.
  * @n: n data for the new node
  *
  * Return: the address of the new node, or NULL if it failed.
@@ -29,6 +28,8 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 			break;
 		if ((idx_cp > tmp->n) & (idx_cp < tmp_forward->n))
 			break;
+		if ((idx_cp < tmp->n) & (idx_cp > tmp_forward->n))
+			break;
 		tmp = tmp->next;
 		tmp_forward = tmp_forward->next;
 
@@ -39,7 +40,8 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	newNode->next = tmp_forward;
 
 	tmp->next = newNode;
-	tmp_forward->prev = newNode;
+	if (tmp_forward != NULL)
+		tmp_forward->prev = newNode;
 
 	return (newNode);
 }
