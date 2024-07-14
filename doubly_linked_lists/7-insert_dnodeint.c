@@ -8,7 +8,7 @@
  * Index starts at 0.
  * @n: n data for the new node
  *
- * Returns: the address of the new node, or NULL if it failed.
+ * Return: the address of the new node, or NULL if it failed.
  * If it is not possible to add the new node at index idx,
  * does not add the new node and returns NULL.
  */
@@ -27,7 +27,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	{
 		if (tmp->next == NULL)
 			break;
-		if (idx_cp > tmp->n & idx_cp < tmp_forward->n)
+		if ((idx_cp > tmp->n) & (idx_cp < tmp_forward->n))
 			break;
 		tmp = tmp->next;
 		tmp_forward = tmp_forward->next;
