@@ -1,6 +1,27 @@
 #include "main.h"
 
 /**
+ * _strlen - Function that returns the length of a string.
+ *
+ * @s: Pointer of type char that points to a string.
+ *
+ * Description: Function that returns the number of bytes of a string pointed
+ * by pointer *s.
+ *
+ * Return: Number of bytes of a string.
+ */
+int _strlen(char *s)
+{
+	int count = 0, i;
+
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		count++;
+	}
+	return (count);
+}
+
+/**
  * binary_to_uint - converts a binary number to an unsigned int.
  *
  * @b: pointer to a string of 0 and 1 chars
@@ -11,7 +32,10 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int i = 0, len = strlen(b), sum = 0;
+	unsigned int i = 0, len, sum = 0;
+	char *s = (char *) b;
+
+	len = _strlen(s);
 
 	for (i = 0; i < len; i++)
 	{
