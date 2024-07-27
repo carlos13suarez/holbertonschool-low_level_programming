@@ -28,32 +28,31 @@ size_t _strlen(char *str)
  */
 int create_file(const char *filename, char *text_content)
 {
-	int fd = 0;
-	int num_letters = 0;
+	int fd = 0, num_letters = 0;
+	mode_t mode = S_IRUSR | S_IWUSR;
 
 	if (filename == NULL)
 		return (-1);
 
 	if (text_content == NULL)
 	{
-		fd = open(filename, O_CREAT, 0600);
+		fd = open(filename, O_CREAT, mode);
 		if (fd == -1)
 			return (-1);
 		return (1);
 	}
 
-	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
+	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, mode);
 	if (fd == -1)
 		return (-1);
 
 	num_letters = write(fd, text_content, _strlen(text_content));
 
-	printf("%s\n", text_content);
 	if (num_letters == -1)
 		return (-1);
 
 	if (close(fd) == -1)
-		return (-1);
+		return (0);
 
 	return (1);
 }
