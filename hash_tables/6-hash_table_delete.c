@@ -2,22 +2,6 @@
 
 
 /**
- * delete_next_node - deletes next node
- * 
- * @node: node to delete
- *
- * Return: Nothing
- */
-void delete_next_node(hash_node_t *node)
-{
-	if (node)
-		delete_next_node(node->next);
-	free(node);
-	return;
-}
-
-
-/**
  * hash_table_delete - deletes a hash table
  *
  * @ht: hash table to delete
@@ -27,7 +11,7 @@ void delete_next_node(hash_node_t *node)
 void hash_table_delete(hash_table_t *ht)
 {
 	unsigned long int i = 0;
-	hash_node_t *currentNode = NULL;
+	hash_node_t *currentNode = NULL, *tmp = NULL;
 
 	if (!ht)
 		return;
@@ -35,9 +19,13 @@ void hash_table_delete(hash_table_t *ht)
 	while (i < ht->size)
 	{
 		currentNode = ht->array[i];
-		if (currentNode->next)
+		while (currentNode)
 		{
-			delete_next_node(currentNode);
+			tmp = currentNode->next;
+			free(currentNode->key);
+			free(currentNode->value);
+			free(currentNode);
+			currentNode = tmp;
 		}
 		i++;
 	}
