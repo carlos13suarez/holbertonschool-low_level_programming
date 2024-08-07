@@ -18,7 +18,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 
 	index = key_index((const unsigned char *) key, ht->size);
 
-	currentNode = ht->array[index]->value;
+	currentNode = ht->array[index];
 
 	while (currentNode)
 	{
