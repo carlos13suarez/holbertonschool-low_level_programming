@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * _strcat - concatenates two strings, but with limit n.
+ * _strncat - concatenates two strings, but with limit n.
  *
  * @dest: .
  * @src: .
